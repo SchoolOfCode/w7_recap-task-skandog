@@ -9,10 +9,20 @@ import React, { useState } from "react";
 import blog from "../../data/blogs";
 import BlogPost from "../BlogPost";
 import CommentList from "../CommentList";
-impo;
+import CommentForm from "../CommentForm";
+import Comment from "../Comment";
 
 function App() {
   const [blogList, setBlogList] = useState(blog);
+  const [commentList, setCommentList] = useState([]);
+
+  function addComment(newComment) {
+    setCommentList([...commentList, newComment]);
+  }
+
+  function onSubmmit(event) {
+    event.preventDefault();
+  }
 
   console.log(blogList);
 

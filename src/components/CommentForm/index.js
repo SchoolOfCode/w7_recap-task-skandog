@@ -13,15 +13,19 @@ function CommentForm({ onSubmit }) {
   };
 
   return (
-    <>
-      <p>Author: </p>
-      <input type="text" onChange={handleNameChange}></input>
-      <p>Comment: </p>
-      <textarea onChange={handleCommentChange}></textarea>
-      <button
-        onClick={comment !== "" ? onSubmit : console.log(`No Comment`)}
-      ></button>
-    </>
+    <div className="comment-form">
+      <div className="comment-input">
+        <p>Author: </p>
+        <input type="text" onChange={handleNameChange}></input>
+        <p>Comment: </p>
+        <textarea onChange={handleCommentChange}></textarea>
+      </div>
+      <div className="comment-button">
+        <button onClick={comment !== "" ? onSubmit : console.log(`No Comment`)}>
+          Click here to troll
+        </button>
+      </div>
+    </div>
   );
 }
 

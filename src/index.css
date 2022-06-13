@@ -17,13 +17,14 @@ body {
 .leftCol {
   float: left;
   width: 75%;
+  padding-left: 1rem;
 }
 
 /* Right column */
 .rightCol {
   float: left;
   width: 25%;
-  padding-left: 5rem;
+  padding-left: 1rem;
 }
 
 .blog-img {
