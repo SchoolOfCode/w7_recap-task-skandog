@@ -11,9 +11,9 @@ import blog from "../../data/blogs.js";
 function BlogPost({ title, author, datePosted, content, imageSrc, imageAlt }) {
   return (
     <div className="blog-post">
-      <h1 className="blog-post-title">{title}</h1>
-      <h2 className="blog-post-author">{author}</h2>
-      <h3 className="blog-post-date">{datePosted}</h3>
+      <h2 className="blog-post-title">{title}</h2>
+      <h3 className="blog-post-author">{author}</h3>
+      <h4 className="blog-post-date">{datePosted}</h4>
       <p className="blog-copy">{content}</p>
       <img className="blog-img" src={imageSrc} alt={imageAlt} />
     </div>
