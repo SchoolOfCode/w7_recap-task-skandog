@@ -46,6 +46,10 @@ body {
   clear: both;
 }
 
+.circle {
+  border-radius: 5rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -7,9 +7,11 @@ then feed back into circle
 
 */
 
-function Comment({ author, content }) {
+import React from "react";
+
+function Comment({ key, author, content }) {
   return (
-    <div className="comment">
+    <li className="comment">
       <span className="author-row">
         <div className="circle">
           {author.split("").map((nom) => {
@@ -19,7 +21,7 @@ function Comment({ author, content }) {
         <div className="author-name">{author}</div>
       </span>
       <p className="content">{content}</p>
-    </div>
+    </li>
   );
 }
 
