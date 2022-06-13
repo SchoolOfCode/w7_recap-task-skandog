@@ -1,4 +1,4 @@
-export const blog = {
+const blog = {
   title: "My First Post",
   author: "Chris Meah",
   datePosted: "20/11/2019",
@@ -14,3 +14,5 @@ export const blog = {
     "https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   imageAlt: "A couple of coders.",
 };
+
+export default blog;

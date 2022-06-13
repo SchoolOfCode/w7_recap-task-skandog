@@ -7,6 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.content-container {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.blog-post {
+  display: block;
+  max-width: 50rem;
+
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
