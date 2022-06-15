@@ -14,7 +14,18 @@ import Comment from "../Comment";
 
 function App() {
   const [blogList, setBlogList] = useState(blog);
-  const [commentList, setCommentList] = useState([]);
+  const [commentList, setCommentList] = useState([
+    {
+      id: "kskBC5HZ8qgNQUiW6If6q",
+      author: "Billy Bootcamper",
+      content: "Hello, great post",
+    },
+    {
+      id: "jFyGAKz1VsGputO1gV8xa",
+      author: "Chris Meah",
+      content: "Many thank yous",
+    },
+  ]);
 
   function addComment(newComment) {
     setCommentList([...commentList, newComment]);
@@ -44,7 +55,7 @@ function App() {
                   imageSrc={post.imageSrc}
                   imageAlt={post.imageAlt}
                 ></BlogPost>
-                <CommentList></CommentList>
+                <CommentList comments={commentList}></CommentList>
                 <CommentForm></CommentForm>
               </>
             );

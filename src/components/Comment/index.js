@@ -9,9 +9,10 @@ then feed back into circle
 
 import React from "react";
 
-function Comment({ key, author, content }) {
+function Comment({ value, author, content }) {
+  console.log(`key = to ` + value);
   return (
-    <li className="comment">
+    <li className="comment" key={value}>
       <span className="author-row">
         <div className="circle">
           {author.split("").map((nom) => {
