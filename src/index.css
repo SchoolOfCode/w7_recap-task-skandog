@@ -1,13 +1,82 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Brush Script MT, Brush Script Std, cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #eb9e9e
 }
 
+.header {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  background: white;
+}
+
+/* Left column */
+.leftCol {
+  float: left;
+  width: 75%;
+  padding-left: 1rem;
+}
+
+/* Right column */
+.rightCol {
+  float: left;
+  width: 25%;
+  padding-left: 1rem;
+}
+
+.blog-img {
+  background-color: rgb(73, 126, 81);
+  width: 100%;
+  border-radius: 5%;
+}
+
+
+.blog-post {
+  background-color: white;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5%
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.comment-container {
+  background-color: aqua;
+}
+
+.author-row {
+  display: flex;
+background-color: aliceblue;
+justify-content: left;
+}
+.circle {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(160, 231, 160);
+  border-radius: 50%;
+}
+
+.circle-text {
+  margin: auto;
+  color: rgb(70, 51, 179);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
 }
