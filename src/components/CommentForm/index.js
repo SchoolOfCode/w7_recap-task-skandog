@@ -12,16 +12,26 @@ function CommentForm({ onSubmit }) {
     setComment(event.currentTarget.value);
   };
 
+  const handleClick = function () {
+    onSubmit(name, comment);
+  };
+
   return (
     <div className="comment-form">
       <div className="comment-input">
         <p>Author: </p>
-        <input type="text" onChange={handleNameChange}></input>
+        <input
+          type="text"
+          onChange={handleNameChange}
+          placeholder={name}
+        ></input>
         <p>Comment: </p>
         <textarea onChange={handleCommentChange}></textarea>
       </div>
       <div className="comment-button">
-        <button onClick={comment !== "" ? onSubmit : console.log(`No Comment`)}>
+        <button
+          onClick={comment !== "" ? handleClick : console.log(`No Comment`)}
+        >
           Click here to troll
         </button>
       </div>

@@ -10,18 +10,21 @@ then feed back into circle
 import React from "react";
 
 function Comment({ value, author, content }) {
-  console.log(`key = to ` + value);
   return (
     <li className="comment" key={value}>
-      <span className="author-row">
-        <div className="circle">
-          {author.split("").map((nom) => {
-            return nom.charAt(0);
-          })}
+      <div className="comment-container">
+        <div className="author-row">
+          <div className="circle">
+            <p className="circle-text">
+              {author.split(" ").map((nom) => {
+                return nom.charAt(0);
+              })}
+            </p>
+          </div>
+          <div className="author-name">{author}</div>
         </div>
-        <div className="author-name">{author}</div>
-      </span>
-      <p className="content">{content}</p>
+        <p className="content">{content}</p>
+      </div>
     </li>
   );
 }

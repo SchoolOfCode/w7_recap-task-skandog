@@ -47,10 +47,27 @@ body {
   clear: both;
 }
 
-.circle {
-  border-radius: 5rem;
+.comment-container {
+  background-color: aqua;
 }
 
+.author-row {
+  display: flex;
+background-color: aliceblue;
+justify-content: left;
+}
+.circle {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(160, 231, 160);
+  border-radius: 50%;
+}
+
+.circle-text {
+  margin: auto;
+  color: rgb(70, 51, 179);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

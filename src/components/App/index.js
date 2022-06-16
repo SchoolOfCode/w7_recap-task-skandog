@@ -11,6 +11,7 @@ import BlogPost from "../BlogPost";
 import CommentList from "../CommentList";
 import CommentForm from "../CommentForm";
 import Comment from "../Comment";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [blogList, setBlogList] = useState(blog);
@@ -27,15 +28,24 @@ function App() {
     },
   ]);
 
-  function addComment(newComment) {
-    setCommentList([...commentList, newComment]);
+  function onSubmit(name, comment) {
+    let copy = [...commentList];
+    copy = [...copy, { id: uuidv4(), author: name, content: comment }];
+    setCommentList(copy);
   }
 
-  function onSubmmit(event) {
-    event.preventDefault();
-  }
+  // function onSubmmit(name, comment) {
+  //   // addComment();
+  // }
 
-  console.log(blogList);
+  const addTask = (userInput) => {
+    let copy = [...toDoList];
+    copy = [
+      ...copy,
+      { id: toDoList.length + 1, task: userInput, complete: false },
+    ];
+    setTodoList(copy);
+  };
 
   return (
     <div className="flex-container">
@@ -56,7 +66,7 @@ function App() {
                   imageAlt={post.imageAlt}
                 ></BlogPost>
                 <CommentList comments={commentList}></CommentList>
-                <CommentForm></CommentForm>
+                <CommentForm onSubmit={onSubmit}></CommentForm>
               </>
             );
           })}
